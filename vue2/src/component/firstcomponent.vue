@@ -1,6 +1,6 @@
 <template>
 	<div id="firstcomponent">
-		<h1>我是郑旭</h1>
+		<h1>我是郑旭1</h1>
 		<a>written by {{author}}</a>
 	</div>
 </template>
