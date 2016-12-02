@@ -3,7 +3,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");//独立css样式
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 module.exports={
-   // devtool: 'eval-source-map',
+    devtool: 'eval-source-map',
 	entry:'./entry.js',
 	output:{
 		path:path.resolve(__dirname,'./dist'),
@@ -41,12 +41,12 @@ module.exports={
         new ExtractTextPlugin("style[hash:8].css"), //{allChunks:true;}表示打包成一个css文件
         new HtmlWebpackPlugin({
             template: __dirname + "/app/index.tmpl.html"//new 一个这个插件的实例，并传入相关的参数
-            }),
-        new webpack.optimize.UglifyJsPlugin({
+            })
+       /* new webpack.optimize.UglifyJsPlugin({
             //警告信息，可以通过以下代码抑制：
             minimize: true,
             compress: {
             warnings: false,
-          },}) //压缩代码
+          },}) //压缩代码*/
     ]
 };
